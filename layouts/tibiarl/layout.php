@@ -399,38 +399,6 @@ if(!defined('INITIALIZED'))
 											<div class="RightChain" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);"></div>
   										</div>
 									</a>
-									<a href='?subtopic=rewardsystem'>
-											<div id='submenu_rewardsystem' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-											<div class='LeftChain' style='background-image:url(<?PHP echo $layout_name; ?>/images/global/general/chain.gif);'></div>
-											<div id='ActiveSubmenuItemIcon_rewardsystem' class='ActiveSubmenuItemIcon' style='background-image:url(<?php echo $layout_name; ?>/images/global/menu/icon-activesubmenu.gif);'></div>
-											<div class='SubmenuitemLabel'>Reward System</div>
-											<div class='RightChain' style='background-image:url(<?PHP echo $layout_name; ?>/images/global/general/chain.gif);'></div>
-										</div>
-									</a>
-									<a href='?subtopic=preysystem'>
-											<div id='submenu_preysystem' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-											<div class='LeftChain' style='background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);'></div>
-											<div id='ActiveSubmenuItemIcon_preysystem' class='ActiveSubmenuItemIcon' style='background-image:url(<?php echo $layout_name; ?>/images/global/menu/icon-activesubmenu.gif);'></div>
-											<div class='SubmenuitemLabel'>Prey System</div>
-											<div class='RightChain' style='background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);'></div>
-										</div>
-									</a>
-									<a href='?subtopic=raids'>
-											<div id='submenu_raids' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-											<div class='LeftChain' style='background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);'></div>
-											<div id='ActiveSubmenuItemIcon_raids' class='ActiveSubmenuItemIcon' style='background-image:url(<?php echo $layout_name; ?>/images/global/menu/icon-activesubmenu.gif);'></div>
-											<div class='SubmenuitemLabel'>Raids</div>
-											<div class='RightChain' style='background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);'></div>
-										</div>
-									</a>
-									<a href='?subtopic=umbralcreation'>
-											<div id='submenu_umbralcreation' class='Submenuitem' onMouseOver='MouseOverSubmenuItem(this)' onMouseOut='MouseOutSubmenuItem(this)'>
-											<div class='LeftChain' style='background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);'></div>
-											<div id='ActiveSubmenuItemIcon_umbralcreation' class='ActiveSubmenuItemIcon' style='background-image:url(<?php echo $layout_name; ?>/images/global/menu/icon-activesubmenu.gif);'></div>
-											<div class='SubmenuitemLabel'>Umbral Creation</div>
-											<div class='RightChain' style='background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif);'></div>
-										</div>
-									</a>
 								</div>
 							</div>
 							<div id="shop" class="menuitem">
