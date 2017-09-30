@@ -67,7 +67,7 @@ $news_content .= '
 							<img src="'.$layout_name.'/images/news/announcement.gif" width="150" height="100" border="0" alt="">
 						</div>
                     <div style="position: relative; top: -9px; margin-bottom: 10px;"><br>
-				 <font size="2px"></font><center><font size="2px"><b> IP:</b> malveraglobal.com.br |&nbsp;  <b>Port:</b> 7171 |&nbsp;  <b>Version:</b> 11.00/11.47</font> <br> </a></center><br><font size="2px">Welcome to <b><font color="green">' . htmlspecialchars($config['server']['serverName']) . '</font></b>, we count on map most complete of all servers currently, Cooldown and reworked Spells for a more dynamic and fun PvP.</p>Several bugs fixed and being fixed daily. Come check out the best server of all time! Here your fun is guaranteed!
+				 <font size="2px"></font><center><font size="2px"><b> IP:</b> seuservidor.com.br |&nbsp;  <b>Port:</b> 7171 |&nbsp;  <b>Version:</b> 11.00/11.47</font> <br> </a></center><br><font size="2px">Welcome to <b><font color="green">' . htmlspecialchars($config['server']['serverName']) . '</font></b>, we count on map most complete of all servers currently, Cooldown and reworked Spells for a more dynamic and fun PvP.</p>Several bugs fixed and being fixed daily. Come check out the best server of all time! Here your fun is guaranteed!
                 </font> </div>
 						</div>
       				</div>
@@ -168,9 +168,8 @@ function showPost($topic, $text, $smile)
     $post .= replaceAll($text, $smile);
     return $post;
 }
-//End Functions
 
-//Most Powerfull Guilds
+/*
 	$main_content .= '
 		<div class="NewsHeadline">
 			<div class="NewsHeadlineBackground" style="background-image:url('.$layout_name.'/images/global/content/newsheadline_background.gif)">
@@ -178,7 +177,6 @@ function showPost($topic, $text, $smile)
     			<div class="MostPowerfullGuilds">Most Powerfull Guilds</div>
 			</div>
 		</div>';
-	
 	$main_content .= '					
 		<table class="Table3" cellpadding="0" cellspacing="0" width="100%">
 			<tbody>
@@ -221,7 +219,8 @@ function showPost($topic, $text, $smile)
 				</tr>
 			</tbody>
 		</table>';
-//Most Powerfull Guilds End
+*/
+
 //Here start news
 	$last_threads = $SQL->query('SELECT ' . $SQL->tableName('players') . '.' . $SQL->fieldName('name') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_text') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_topic') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('icon_id') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('news_icon') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_smile') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('id') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('replies') . ', ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_date') . ' FROM ' . $SQL->tableName('players') . ', ' . $SQL->tableName('z_forum') . ' WHERE ' . $SQL->tableName('players') . '.' . $SQL->fieldName('id') . ' = ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('author_guid') . ' AND ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('section') . ' = 1 AND ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('first_post') . ' = ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('id') . ' ORDER BY ' . $SQL->tableName('z_forum') . '.' . $SQL->fieldName('post_date') . ' DESC LIMIT ' . $config['site']['news_limit'])->fetchAll();
 	
