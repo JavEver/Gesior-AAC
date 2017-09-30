@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 15-Set-2017 às 22:39
+-- Generation Time: 30-Set-2017 às 16:45
 -- Versão do servidor: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `gesior`
+-- Database: `global`
 --
 
 -- --------------------------------------------------------
@@ -69,6 +69,7 @@ CREATE TABLE `accounts` (
 
 INSERT INTO `accounts` (`id`, `name`, `password`, `secret`, `type`, `premdays`, `coins`, `lastday`, `email`, `creation`, `vote`, `key`, `email_new`, `email_new_time`, `rlname`, `location`, `page_access`, `email_code`, `next_email`, `premium_points`, `create_date`, `create_ip`, `last_post`, `flag`, `vip_time`, `guild_points`, `guild_points_stats`, `passed`, `block`, `refresh`, `birth_date`, `gender`, `loyalty_points`, `authToken`) VALUES
 (1, '1', '060d38973b4ba4051fa6ca22f9acd4be7d1557fe', NULL, 1, 0, 0, 0, '', 0, 0, '0', '', 0, '', '', 9999, '', 0, 0, 0, 0, 0, 'unknown', 0, 0, 0, 0, 0, 0, '', '', 0, '');
+
 -- --------------------------------------------------------
 
 --
@@ -138,19 +139,6 @@ CREATE TABLE `blessings_history` (
   `blessing` tinyint(4) NOT NULL,
   `loss` tinyint(1) NOT NULL,
   `timestamp` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `bot_reports`
---
-
-CREATE TABLE `bot_reports` (
-  `id` int(11) NOT NULL,
-  `reporter` varchar(40) NOT NULL,
-  `reported` varchar(40) NOT NULL,
-  `report_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -1422,6 +1410,8 @@ CREATE TABLE `newsticker` (
   `icon` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
 -- Estrutura da tabela `pagseguro`
 --
@@ -1567,6 +1557,7 @@ CREATE TABLE `players` (
 
 INSERT INTO `players` (`id`, `name`, `group_id`, `account_id`, `level`, `vocation`, `health`, `healthmax`, `experience`, `lookbody`, `lookfeet`, `lookhead`, `looklegs`, `looktype`, `lookaddons`, `maglevel`, `mana`, `manamax`, `manaspent`, `soul`, `town_id`, `posx`, `posy`, `posz`, `conditions`, `cap`, `sex`, `lastlogin`, `lastip`, `save`, `skull`, `skulltime`, `lastlogout`, `blessings`, `blessings1`, `blessings2`, `blessings3`, `blessings4`, `blessings5`, `blessings6`, `blessings7`, `blessings8`, `onlinetime`, `deletion`, `balance`, `offlinetraining_time`, `offlinetraining_skill`, `stamina`, `skill_fist`, `skill_fist_tries`, `skill_club`, `skill_club_tries`, `skill_sword`, `skill_sword_tries`, `skill_axe`, `skill_axe_tries`, `skill_dist`, `skill_dist_tries`, `skill_shielding`, `skill_shielding_tries`, `skill_fishing`, `skill_fishing_tries`, `deleted`, `description`, `comment`, `create_ip`, `create_date`, `hide_char`, `cast`, `skill_critical_hit_chance`, `skill_critical_hit_chance_tries`, `skill_critical_hit_damage`, `skill_critical_hit_damage_tries`, `skill_life_leech_chance`, `skill_life_leech_chance_tries`, `skill_life_leech_amount`, `skill_life_leech_amount_tries`, `skill_mana_leech_chance`, `skill_mana_leech_chance_tries`, `skill_mana_leech_amount`, `skill_mana_leech_amount_tries`, `skill_criticalhit_chance`, `skill_criticalhit_damage`, `skill_lifeleech_chance`, `skill_lifeleech_amount`, `skill_manaleech_chance`, `skill_manaleech_amount`, `prey_stamina_1`, `prey_stamina_2`, `prey_stamina_3`, `prey_column`, `bonus_reroll`, `xpboost_stamina`, `xpboost_value`, `marriage_status`, `hide_skills`, `hide_set`, `former`, `signature`, `marriage_spouse`, `loyalty_ranking`) VALUES
 (1, 'Rook Sample', 1, 1, 1, 0, 150, 150, 0, 106, 95, 78, 116, 128, 0, 0, 5, 5, 0, 0, 2, 32104, 32191, 6, '', 400, 0, 1407021967, 1793873073, 1, 0, 0, 1407021968, 0, 0, 0, 0, 0, 0, 0, 0, 0, 203, 0, 0, 43200, -1, 2520, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, 1, 0, NULL, NULL, 0, NULL, NULL, '-', '', -1, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -1752,6 +1743,8 @@ CREATE TABLE `player_preytimes` (
   `bonus_value3` int(11) NOT NULL,
   `bonus_name3` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
 -- Estrutura da tabela `player_rewards`
@@ -2144,13 +2137,6 @@ ALTER TABLE `account_viplist`
   ADD KEY `player_id` (`player_id`);
 
 --
--- Indexes for table `bot_reports`
---
-ALTER TABLE `bot_reports`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `reported` (`reported`);
-
---
 -- Indexes for table `global_storage`
 --
 ALTER TABLE `global_storage`
@@ -2414,11 +2400,6 @@ ALTER TABLE `accounts`
 ALTER TABLE `account_ban_history`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `bot_reports`
---
-ALTER TABLE `bot_reports`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `guilds`
 --
 ALTER TABLE `guilds`
@@ -2535,12 +2516,6 @@ ALTER TABLE `account_ban_history`
 ALTER TABLE `account_viplist`
   ADD CONSTRAINT `account_viplist_ibfk_1` FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `account_viplist_ibfk_2` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE;
-
---
--- Limitadores para a tabela `bot_reports`
---
-ALTER TABLE `bot_reports`
-  ADD CONSTRAINT `bot_reports_ibfk_2` FOREIGN KEY (`reported`) REFERENCES `players` (`name`) ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `guilds`
@@ -2671,14 +2646,6 @@ ALTER TABLE `store_history`
 --
 ALTER TABLE `tile_store`
   ADD CONSTRAINT `tile_store_ibfk_1` FOREIGN KEY (`house_id`) REFERENCES `houses` (`id`) ON DELETE CASCADE;
-
-DELIMITER $$
---
--- Eventos
---
-CREATE DEFINER=`root`@`localhost` EVENT `expire_old_bot_reports` ON SCHEDULE EVERY 1 DAY STARTS '2017-03-03 05:10:04' ON COMPLETION NOT PRESERVE ENABLE DO DELETE FROM bot_reports where TIMESTAMPDIFF(HOUR,report_date,NOW())>24$$
-
-DELIMITER ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
