@@ -67,7 +67,7 @@ $towns_list = array(
 $config['site']['sqlHost'] = "localhost";
 $config['site']['sqlUser'] = "root";
 $config['site']['sqlPass'] = "YOUR DATABASE PASSWORD HERE";
-$config['site']['sqlBD'] = "global";
+$config['site']['sqlBD'] = "YOUR DATABASE NAME";
 
 # Create Account Options
 $config['site']['one_email'] = true;
