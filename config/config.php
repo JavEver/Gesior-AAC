@@ -39,7 +39,7 @@ $config['site']['formerNames'] = 10;
 $config['site']['formerNames_amount'] = 10;
 
 # Account Maker Config
-$config['site']['serverPath'] = "";
+$config['site']['serverPath'] = ""; 
 $config['site']['useServerConfigCache'] = false;
 $towns_list = array(
 1 => 'Venore', 
@@ -47,7 +47,7 @@ $towns_list = array(
 3 => 'Kazordoon', 
 4 => 'Carlin', 
 5 => 'Ab\'Dendriel', 
-6 => 'Dawnport', 
+6 => 'Rookgaard', 
 7 => 'Liberty Bay', 
 8 => 'Port Hope', 
 9 => 'Ankrahmun', 
@@ -56,32 +56,31 @@ $towns_list = array(
 12 => 'Svargrond', 
 13 => 'Yalahar', 
 14 => 'Farmine', 
-15 => 'Gray Beach',
-16 => 'Roshamuul',
-//17 => 'Isle of Solitude',
-18 => 'Rathleton',
-19 => 'Krailos',
-35 => 'Rookgaard',
-//21 => 'Town Bomb',
+28 => 'Gray Beach',
+29 => 'Roshamuul',
+33 => 'Rathleton',
+34 => 'Krailos',
+51 => 'Dawnport',
+52 => 'Feyrist',
 );
 # this is important if you want to use ajax check in your create account
 $config['site']['sqlHost'] = "localhost";
 $config['site']['sqlUser'] = "root";
-$config['site']['sqlPass'] = "";
-$config['site']['sqlBD'] = "";
+$config['site']['sqlPass'] = "YOUR DATABASE PASSWORD HERE";
+$config['site']['sqlBD'] = "global";
 
 # Create Account Options
 $config['site']['one_email'] = true;
 $config['site']['create_account_verify_mail'] = true;
 $config['site']['verify_code'] = true;
 $config['site']['email_days_to_change'] = 7;
-$config['site']['newaccount_premdays'] = 3;
+$config['site']['newaccount_premdays'] = 0;
 $config['site']['send_register_email'] = true;
 
 # Create Character Options
-$config['site']['newchar_vocations'] = array(0 => 'Rook Sample');
-$config['site']['newchar_towns'] = array(6);
-$config['site']['max_players_per_account'] = 7;
+$config['site']['newchar_vocations'] = array(0 => 'Rook Sample'); // if you wan't use rook, put (1 => 'Sorcerer Sample', 2 => 'Druid Sample', 3 => 'Paladin Sample', 4 => 'Knight Sample');
+$config['site']['newchar_towns'] = array(6, 51);
+$config['site']['max_players_per_account'] = 10;
 
 
 # Emails Config

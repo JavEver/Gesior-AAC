@@ -157,22 +157,6 @@ $main_content .= '
 																					<div class="ServiceID_HelperDiv" style="z-index: 999;" ></div>
 																				</span>
 																			</div>';
-																	if ($product['category'] == 4) {
-																		$main_content .= '
-																			<div class="ServiceID_Icon_New" id="ServiceID_Icon_New_'.$product['id'].'" style="background-image:url('.$layout_name.'/images/shop/outfits/'.strtolower(str_replace(" ","_",$product['addon_name'])).'_male.gif); background-repeat:no-repeat; margin:5px 0;" ></div>
-																			<div class="ServiceID_Icon_New" id="ServiceID_Icon_New_'.$product['id'].'" style="background-image:url('.$layout_name.'/images/shop/outfits/'.strtolower(str_replace(" ","_",$product['addon_name'])).'_female.gif); background-repeat:no-repeat; margin:5px 60px;" ></div>';
-																			}
-																	if ($product['category'] == 5)
-																		$main_content .= '
-																			<div class="ServiceID_Icon_New" id="ServiceID_Icon_New_'.$product['id'].'" style="background-image:url('.$layout_name.'/images/shop/items/'.$product['itemid'].'.gif); background-repeat:no-repeat; margin:20px 45px;" ></div>';
-																	if ($product['category'] == 3) {
-																		$main_content .= '
-																			<div class="ServiceID_Icon_New" id="ServiceID_Icon_New_'.$product['id'].'" style="background-image:url('.$layout_name.'/images/shop/mounts/'.str_replace(" ","_",$product['offer_name']).'.gif); background-repeat:no-repeat; margin:-5px 22px;" ></div>';
-																	}
-																	if ($product['category'] == 6) {
-																		$main_content .= '
-																			<div class="ServiceID_Icon_New" id="ServiceID_Icon_New_'.$product['id'].'" style="background-image:url('.$layout_name.'/images/shop/points.gif); background-repeat:no-repeat; margin:20px 45px;" ></div>';
-																	}
 																			
 																		$main_content .= '
 																			<div class="ServiceID_Icon_Selected" id="ServiceID_Icon_Selected_'.$product['id'].'" ></div>
@@ -195,12 +179,6 @@ $main_content .= '
 													else {
 														if($serviceCategoryId == 2)
 															$itemName = "Extra Services";
-														if($serviceCategoryId == 3)
-															$itemName = "Mounts";
-														if($serviceCategoryId == 4)
-															$itemName = "Outfits";
-														if($serviceCategoryId == 5)
-															$itemName = "Items";
 																	
 														$main_content .= '<p>None <strong>'.$itemName.'</strong> has been added for sale yet .</p>';
 													}
