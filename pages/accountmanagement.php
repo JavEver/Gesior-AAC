@@ -4447,14 +4447,14 @@ function NameStateChanged()
 						$newchar_errors[] = 'Please select a vocation for your character.';
 				}
 				else
-					$newchar_vocation = $config['site']['newchar_vocations'];
+					$newchar_vocation = $config['site']['newchar_vocations'][0];
 				if(count($config['site']['newchar_towns']) > 1)
 				{
 					if(empty($newchar_town))
 						$newchar_errors[] = 'Please select a town for your character.';
 				}
 				else
-					$newchar_town = $config['site']['newchar_towns'];
+					$newchar_town = $config['site']['newchar_towns'][0];
 				if(empty($newchar_errors))
 				{
 					if(!check_name_new_char($newchar_name))
